@@ -1,6 +1,7 @@
 $(function () {
 
-	$('#sendbtn').click(function() {
+
+	function graph() {
 		var value = $('#lynx_ticker').val().trim().toLowerCase();
 		var ticker = value.toUpperCase()
 
@@ -11,7 +12,9 @@ $(function () {
 		$.getJSON(string, function (data) {
 
 			if (data == null) {
-				alert('Ticker ' + ticker + ' not found');
+				$('#lynx_graph').text('Ticker ' + ticker + ' not found');
+				$('#lynx_graph').css("font-size", "20px");
+				$('#lynx_graph').effect("shake");
 				return;
 			}
 
@@ -80,7 +83,15 @@ $(function () {
 	            }]
 	        });
 		});
-    });   
+    }   
+
+	$('#lynx_ticker').keypress(function(event) {
+		if (event.keyCode == 13 || event.which == 13) {
+			graph();
+		}
+	});
+
+	$('#sendbtn').click(graph);
 
 
 });

@@ -5,7 +5,7 @@
  */
 
 body {
-  font-family: Arial, 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
 p {
@@ -83,7 +83,7 @@ header img {
 }
 header .intro-text .name {
   display: block;
-  font-family: Arial, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
@@ -106,7 +106,7 @@ header .intro-text .skills {
 }
 .navbar-custom {
   background: #2C3E50;
-  font-family: Arial, "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   border: none;
@@ -507,9 +507,5 @@ fieldset[disabled] .btn-success.active {
 
 .lynx {
   font-family: "Arial" !important;
-  font-size: 4em;
 }
 
-#lynx_graph {
-	margin-top: 20px;
-}

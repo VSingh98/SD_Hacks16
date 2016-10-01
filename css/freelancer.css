@@ -396,3 +396,7 @@ fieldset[disabled] .btn-success.active {
   font-family: "Arial" !important;
   font-size: 4em;
 }
+
+#lynx_graph {
+	margin-top: 20px;
+}

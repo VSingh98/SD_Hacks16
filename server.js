@@ -2,6 +2,11 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+app.use( bodyParser.json() );
+app.use(bodyParser.urlencoded(
+{ extended: true }
+));
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/',function(req, res){
@@ -9,7 +14,7 @@ app.get('/',function(req, res){
 });
 
 app.post('/api/email', function(req, res){
-	console.log("Posted info " + req.body);
+	console.log(req.body);
 });
 
 var prt = 8000;

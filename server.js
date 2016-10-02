@@ -38,7 +38,7 @@ app.post('/api/email', function(req, res){
 	}));
 
 	client.messages.create({
-	    body: 'Hello from Lynx',
+	    body: 'Hi ' + name + '! This is Lynx!',
 	    to: number,  // Text this number
 	    from: twilioNumber // From a valid Twilio number
 	}, function(err, message) {

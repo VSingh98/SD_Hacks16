@@ -44,7 +44,7 @@ $(function () {
 
 	        	yAxis: {
 	        		title: {
-	        			text: 'Exchange rate'
+	        			text: 'Price'
 	        		}
 	        	},
 
@@ -53,19 +53,10 @@ $(function () {
 	        		data: data,
 	        		id: 'dataseries'
 
-	            // the event marker flags
-	        },{
-	        	type: 'flags',
-	        	data: [{
-	        		x: Date.UTC(2016, 8, 1),
-	        		title: 'iPhone 7',
-	        		text: 'iPhone 7 Released in USA'
-	        	}],
-	        	onSeries: 'dataseries',
-	        	shape: 'circlepin',
-	        	width: 80
-	        }]
-	    });
+			            // the event marker flags
+			        }]
+			});
+
 	    });
 	}   
 

@@ -54,8 +54,9 @@ app.get('/api/getArticles', function(req, res){
 
 });
 
-var prt = process.env.PORT || 8000;
-app.listen(prt);
+app.set('port', (process.env.PORT || 5000));
+
+app.listen(app.get('port'));
 
 console.log("Running at Port " + prt);
 

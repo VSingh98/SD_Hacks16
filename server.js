@@ -14,7 +14,7 @@ app.get('/',function(req, res){
 });
 
 app.post('/api/email', function(req, res){
-	console.log(req.body);
+	console.log(name);
 });
 
 var prt = 8000;

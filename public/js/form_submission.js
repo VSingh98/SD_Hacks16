@@ -1,7 +1,8 @@
 $(function() {
 	$('#formform').submit( function() {
 		$('#formform').hide();
-		$('#bla').text('Thank you!');
-		$('#blabla').text('Please confirm email and phone number');
+		$('#bla').text('(ᵔᴥᵔ)');
+		$('#bla').addClass('lynx')
+		$('#blabla').text('Thank you for registering with lynx');
 	});	
 });

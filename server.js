@@ -8,10 +8,17 @@ var alchemy_language = watson.alchemy_language({
   api_key: 'API_KEY'
 });
 
+var accountSid = 'AC97177c4030bde8b6f9f34c5637e29ec7'; // Your Account SID from www.twilio.com/console
+var authToken = 'fabd42d3553729e2bcfee4e03a8061c9';   // Your Auth Token from www.twilio.com/console
+
+var twilio = require('twilio');
+var client = new twilio.RestClient(accountSid, authToken);
+const twilioNumber='14423337300';
+
 app.use( bodyParser.json() );
-app.use(bodyParser.urlencoded(
-{ extended: true }
-));
+app.use(bodyParser.urlencoded({ 
+	extended: true 
+}));
 
 app.use(express.static(__dirname + '/public'));
 
@@ -29,6 +36,17 @@ app.post('/api/email', function(req, res){
 		email: email,
 		number: number
 	}));
+
+	client.messages.create({
+	    body: 'Hello from Lynx',
+	    to: number,  // Text this number
+	    from: twilioNumber // From a valid Twilio number
+	}, function(err, message) {
+	    if(err) {
+	        console.error(err.message);
+		}
+	});
+
 
 });
 

@@ -58,5 +58,5 @@ app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'));
 
-console.log("Running at Port " + prt);
+console.log("Running at Port " + app.get('port'));
 

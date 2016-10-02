@@ -28,12 +28,12 @@ app.get('/',function(req, res){
 
 app.post('/api/email', function(req, res){
 	var name = req.body.username;
-	var email = req.body.email;
+	//var email = req.body.email;
 	var number = req.body.number;
 
 	console.log(JSON.stringify( {
 		name: name,
-		email: email,
+		//email: email,
 		number: number
 	}));
 
